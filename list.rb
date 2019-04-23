@@ -21,4 +21,26 @@ class List
     end
     return task_names
   end
+
+  def number_of_incomplete_tasks
+    incomplete_task_names.length
+  end
+
+  def delete_complete_tasks
+    incomplete_task_names
+  end
+
+  def sort_by_priority
+    hash = Hash.new(0)
+    @tasks.each do |task|
+      hash[task.name] = task.priority
+    end
+    hash.sort
+    prioritized = []
+    hash.each do |arr|
+      prioritized << arr[0]
+    end
+    prioritized
+  end
+
 end

@@ -16,13 +16,29 @@ To download these files, you can simply click on the 'Download ZIP' button to th
 
 3. Answer the following questions regarding oop_todo.rb:
 	a. Explain line 5.
+
+        Store a new instance of List in the local variable list.
+
     b. Explain line 8.
+
+        Create a new instance of Task and initialize that instance's @name as the string "Feed the cat". Directly input this information into the add_task method of list, which adds that task instance to the array @tasks.
+
     c. Explain line 14.
+    
+        Index 1 of the array @tasks is inputed into the method name which returns @name, and is subsequently printed out. "Take out trash".
+
     d. Explain line 31. 
+
+        list.tasks returns the array @tasks, and the [0] returns index 0 of @tasks. @tasks[0] "feed the cat" inputs into the method complete! which switches the task instance of "feed the cat" from @complete = false to @complete = true.
 
 4. Answer the following questions:
     a. In your opinion, what advantages does oop_todo have over procedural_todo?
+
+        The first thing I notice is that the oop_todo requires less computing power than procedural_todo. While procedural_todo must iterate over an entire array every time it wants to recover information about a particular task, oop_todo creates a system for marking every task as an instance and premarking them, allowing this information to be accessed instantly. I could see procedural programming creating bottlenecks that oop would completely bypass.
+
     b. In your opinion, what advantages does procedural_todo have over oop_todo?
+
+        I think procedural programming is probably a better solution to this problem in particular, where the data set is small. It only requires one file, and not very many lines of code. It's also more readable for the same reason.
 
 5. Let's add some more functionality to our application (the OOP version)! Add a new method to Task called toggle_complete! that will do the following: If the task is currently marked as complete, it will now be marked as incomplete, and if it is currently marked as incomplete, it will now be marked as complete. Test this functionality by adding more code to oop_todo.rb.
 
